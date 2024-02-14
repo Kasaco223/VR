@@ -15,6 +15,17 @@ public class PlayerMovement : MonoBehaviour
 
         // Aplicar movimiento solo en los ejes X y Z (arriba y los lados)
         Vector3 movement = transform.TransformDirection(moveDirection) * moveSpeed * Time.deltaTime;
-        transform.Translate(movement/8);
+        transform.Translate(movement/2);
+
+        if (!Input.anyKey)
+        {
+            // Detener el movimiento del Rigidbody
+            //GetComponent<Rigidbody>().velocity = Vector3.zero;
+            moveSpeed = 0f;
+        }
+        else
+        {
+            moveSpeed = 1f;
+        }
     }
 }
