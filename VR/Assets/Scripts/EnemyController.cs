@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     private Rigidbody rb; // Referencia al Rigidbody del objeto
 
     // La velocidad de movimiento del objeto
-    public float speed = 0.05f;
+    public float speed = 500f;
 
     // Se llama al inicio del juego
     void Start()
@@ -27,6 +27,6 @@ public class EnemyController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(lookDirection);
 
         // Movemos el objeto utilizando el Rigidbody
-        rb.velocity = transform.forward/16 * speed;
+        rb.velocity = transform.forward * speed;
     }
 }
