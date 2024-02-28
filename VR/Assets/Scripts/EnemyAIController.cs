@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyAIController : MonoBehaviour
 {
     private Transform playerTransform; // Referencia al transform del jugador
-    private NavMeshAgent nav; // Referencia al componente NavMeshAgent
+    public NavMeshAgent nav; // Referencia al componente NavMeshAgent
 
     // Se llama al inicio del juego
     void Start()
